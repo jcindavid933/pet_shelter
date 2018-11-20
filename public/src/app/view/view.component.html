@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pet Shelter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script data-require="angular.js@1.3.15" data-semver="1.3.15" src="https://code.angularjs.org/1.3.15/angular.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <a [routerLink]="['/']" id='home'>Home</a>
+      <h3>Details about {{onePet.name}}</h3><br>
+      <div class="labels">
+        <p><b> Pet Type: </b></p><br>
+        <p><b>Description: </b></p><br>
+        <p><b>Skills: </b></p><br>
+        <p><b>Likes: </b></p>
+      </div>
+      <div class="info">
+        <p>{{onePet.type}}</p><br>
+        <p>{{onePet.desc}}</p><br>
+        <p class='up'>{{onePet.skill1}} {{onePet.skill2}} {{onePet.skill3}}</p><br>
+        <p class='up'>{{onePet.like}}</p>
+      </div><br><br>
+
+      <button (click)='like()' type="button" class="btn btn-primary" id='blue' [disabled]='isDisabled'>Like this pet!</button>
+      <button (click)='deletePet()' type="button" class="btn btn-primary" id='green'>Adopt this pet!</button>
+      <a [routerLink]="['/chat/' + onePet._id]"><button type="button" class="btn btn-primary" id='orange'>Chat about Pet!</button></a>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

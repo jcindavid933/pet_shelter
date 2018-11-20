@@ -1,0 +1,13 @@
+#chat_board{
+  width: 100%;
+  border: 2px solid black;
+  height: 600px;
+  overflow: auto;
+}
+#message{
+  width: 100%;
+}
+#submit{
+  margin-left: 94.2%;
+  margin-top: 1%;
+}
